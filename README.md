@@ -9,8 +9,7 @@
 - Add new tasks to the list.
 - Edit existing tasks.
 - Mark tasks as completed.
-- Real-time data persistence using **Firebase**.
-- Responsive and user-friendly interface.
+- Responsive and basic interface.
 
 ## Technologies Used
 <table align="left" height="255px">
