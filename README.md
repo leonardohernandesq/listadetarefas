@@ -1,70 +1,111 @@
-# Getting Started with Create React App
+# Simple To-do List
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![To-do List Screenshot](image-readme.png)
 
-## Available Scripts
+## Overview
+**To-do List** is a simple web application that allows users to add, view, edit, and mark tasks as completed. The app uses **React** for building the user interface and **Firebase** for real-time data storage. This project is great for learning how to integrate Firebase with a React application and implementing basic CRUD (Create, Read, Update) functionalities.
 
-In the project directory, you can run:
+## Features
+- Add new tasks to the list.
+- Edit existing tasks.
+- Mark tasks as completed.
+- Real-time data persistence using **Firebase**.
+- Responsive and user-friendly interface.
 
-### `npm start`
+## Technologies Used
+<table align="left" height="255px">
+  <tr>
+    <td align="center">
+      <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/">
+        <img src="https://skillicons.dev/icons?i=html" width="65px" alt="HTML5 icon"/><br/>
+        <sub>
+          <b>
+            <pre>HTML5</pre>
+          </b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/">
+        <img src="https://skillicons.dev/icons?i=css" width="65px" alt="CSS3 icon"/><br/>
+        <sub>
+          <b>
+            <pre>CSS3</pre>
+          </b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/">
+        <img src="https://skillicons.dev/icons?i=js" width="65px" alt="Javascript icon"/><br/>
+        <sub>
+          <b>
+            <pre>Javascript</pre>
+          </b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://react.dev/">
+        <img src="https://skillicons.dev/icons?i=react" width="65px" alt="React icon"/><br/>
+        <sub>
+          <b>
+            <pre>React</pre>
+          </b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://firebase.google.com/">
+        <img src="https://skillicons.dev/icons?i=firebase" width="65px" alt="Firebase icon"/><br/>
+        <sub>
+          <b>
+            <pre>Firebase</pre>
+          </b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
+<br/><br/><br/><br/><br/><br/><br/><br/>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Getting Started
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Clone the repository:
+```bash
+git clone https://github.com/leonardohernandesq/listadetarefas
+```
+2. Install dependencies:
+ ```bash
+npm install
+```
 
-### `npm test`
+3. Set up Firebase:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Create a project in the Firebase Console.
+Add Firebase to your React project by following the instructions provided in the Firebase documentation.
+In the code, replace the Firebase configuration in firebase-config.js with your project's Firebase credentials.
 
-### `npm run build`
+### Firebase Setup
+To integrate Firebase with your project, you'll need to set up Firebase Firestore (for storing tasks) and obtain your Firebase project's credentials. Edit a firebaseConnetion.js file in the src directory and add the Firebase configuration, as shown below:
+```javascript
+const firebaseConfig = {
+  apiKey: "YOUR-API-KEY",
+  authDomain: "YOUR-PROJECT.firebaseapp.com",
+  projectId: "YOUR-PROJECT",
+  storageBucket: "YOUR-PROJECT.appspot.com",
+  messagingSenderId: "YOUR-ID",
+  appId: "YOUR-APP-ID",
+};
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4.Start the development server:
+```bash
+npm start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Now, you can access the app in your browser at http://localhost:3000.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Visit the live site at [StreamKing](https://streamking.netlify.app/).
